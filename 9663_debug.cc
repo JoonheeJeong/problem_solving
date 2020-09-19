@@ -2,6 +2,8 @@
    0. bool -> 마킹한 역순으로 해야 하는데 잘못 생각함
    1. int, += i, -= i -> when i == 0, += 0
    2. ++, -- -> success!
+   ----
+   n^n * n! ? 암튼 굉장히 복잡도 높음.
 */
 
 #include <iostream>
