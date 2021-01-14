@@ -1,12 +1,11 @@
 #include <iostream>
-#include <algorithm> // fill
 
 using namespace std;
 
-constexpr int size(int k) { return 4*k-3; }
+inline constexpr int size(int k) { return 4*k-3; }
 constexpr int MAX_SIZE = size(100);
 
-char output[MAX_SIZE][MAX_SIZE];
+char output[MAX_SIZE][MAX_SIZE+1];
 int n;
 
 void f(int k, int bg)
@@ -35,11 +34,8 @@ int main()
         fill(output[i], output[i]+ed, ' ');
     f(n, 0);
 
-    for (int i = 0; i < ed; ++i) {
-        for (int j = 0; j < ed; ++j)
-            cout << output[i][j];
-        cout << '\n';
-    }
+    for (int i = 0; i < ed; ++i)
+        cout << output[i] << '\n';
     return 0;
 }
 
